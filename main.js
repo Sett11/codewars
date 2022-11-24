@@ -1,2 +1,3 @@
-var websites = new Array(1000)
-websites.fill("codewars")
+function odds(values){
+    return values.filter(el => el%2!==0);
+  }
