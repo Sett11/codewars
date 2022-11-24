@@ -1,4 +1,2 @@
-function check(a,x){
-    return a.some(el=>el===x)
-  }
-  
+var websites = new Array(1000)
+websites.fill("codewars")
