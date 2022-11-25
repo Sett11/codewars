@@ -1,1 +1,3 @@
-const combineNames = (a,b) => a+b
+function toNumberArray(stringarray){
+  return stringarray.map(el=> Number(el))
+}
