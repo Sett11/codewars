@@ -1,3 +1,4 @@
-function toNumberArray(stringarray){
-  return stringarray.map(el=> Number(el))
+var quote = function(fighter) {
+  return fighter.toLowerCase()==='conor mcgregor'?"I'd like to take this chance to apologize.. To absolutely NOBODY!":
+  fighter.toLowerCase()==='george saint pierre'?"I am not impressed by your performance.":null
 }
