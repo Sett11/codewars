@@ -1,1 +1,1 @@
-const CombineNames = (a,b) => a+b
+const combineNames = (a,b) => a+b
