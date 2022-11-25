@@ -1,3 +1,1 @@
-function odds(values){
-    return values.filter(el => el%2!==0);
-  }
+const CombineNames = (a,b) => a+b
