@@ -1,20 +1,19 @@
-function Bird() { }
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
 
-Bird.prototype.fly = function() {
-  return "I am flying!"
-  };
-
-function Penguin() { }
-Penguin.prototype = Object.create(Bird.prototype);
-Penguin.prototype.constructor = Penguin;
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
 
 // Only change code below this line
+let glideMixin = function(obj){
+  obj.glide = function(){
 
-
-Penguin.prototype.fly = function(){
-  return 'Alas, this is a flightless bird.'
+  }
 }
-// Only change code above this line
+glideMixin(bird)
+glideMixin(boat)
 
-let penguin = new Penguin();
-console.log(penguin.fly());
