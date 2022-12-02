@@ -1,10 +1,9 @@
-function chunkArrayInGroups(arr, size) {
-  let newArr = []
-  let count = 0
-  while(count<arr.length){
-    newArr.push(arr.slice(count, count += size))
+function frankenSplice(arr1, arr2, n) {
+  let res = arr2.slice()
+  for(let i = 0; i < arr1.length; i++){
+    res.splice(n+i, 0, arr1[i])
   }
-  return newArr
+  return res
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
