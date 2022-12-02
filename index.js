@@ -2,10 +2,13 @@ function Dog(name) {
   this.name = name;
 }
 
-// Only change code below this line
-function joinDogFraternity(candidate) {
-  if(candidate.constructor===Dog){
-    return true
+Dog.prototype = {
+  // Only change code below this line
+  numLegs: 4,
+  eat(){
+    console.log('nom nom nom')
+  },
+  describe(){
+     console.log("My name is " + this.name);
   }
-  return false
-}
+};
