@@ -1,19 +1,8 @@
-let bird = {
-  name: "Donald",
-  numLegs: 2
-};
+function Bird() {
+  let weight = 15;
 
-let boat = {
-  name: "Warrior",
-  type: "race-boat"
-};
-
-// Only change code below this line
-let glideMixin = function(obj){
-  obj.glide = function(){
-
+  this.getWeight = function(){
+    return weight
   }
 }
-glideMixin(bird)
-glideMixin(boat)
 
