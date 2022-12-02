@@ -1,5 +1,7 @@
-function Dog(){
-  this.name = 'Vasia',
-  this.color = 'red',
-  this.numLegs = 4
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
 }
+// Only change code below this line
+const hound = new Dog()
