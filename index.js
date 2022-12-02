@@ -1,7 +1,7 @@
-function titleCase(str) {
-  return str.toLowerCase().split(' ')
-  .map(el=>el.charAt(0).toUpperCase() + el.slice(1))
-  .join(' ')
-}
-
-titleCase("I'm a little tea pot");
+let dog = {
+  name: "Spot",
+  numLegs: 4
+};
+// Only change code below this line
+console.log(dog.name);
+console.log(dog.numLegs);
