@@ -1,13 +1,13 @@
-function stringTransformer(str) {
-  return str.split(' ').map((el) => {
-    return [...el].map((el) => {
-          if(el === el.toUpperCase()){
-          el = el.toLowerCase()
-          return el
-      } else{
-          el = el.toUpperCase()
-          return el
+function grabDoll(dolls){
+  var bag=[];
+  for(let i = 0; i < dolls.length; i++){
+      if(dolls[i] !== "Hello Kitty" && dolls[i] !== "Barbie doll"){
+           continue
       }
-      }).join('')
-  }).reverse().join(' ')
+      bag.push(dolls[i])
+      if(bag.length >= 3){
+          break
+      } 
+  }
+  return bag;
 }
