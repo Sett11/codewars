@@ -1,12 +1,13 @@
-function capitalize(s,arr){
-  let newStr = s.split('')
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > newStr.length){
-            let w = arr.indexOf(arr[i])
-            arr.splice(w,1)
-        } else{
-            newStr[arr[i]] = newStr[arr[i]].toUpperCase()
-        }
-    }
-    return newStr.join('')
+function solve(s){
+    const arr = []
+s.split('').map((el) => {
+     if(el === 'a' || el === 'u' || el === 'i' || el === 'e' || el === 'o'){
+         return el
+     } else{
+         el = 0
+         return el
+     }
+ }).join('').split(/0/g).map((el) => arr.push(el.split('').length))
+    const res = arr.sort((a,b) => b - a)
+    return res[0]
 }
