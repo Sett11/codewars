@@ -3,7 +3,11 @@ function Node(data) {
   this.next = null;
 }
 
-function getNth(node, index) {
-  if(!node) throw new Error('Invalid node at ' + index)
-  return index === 0 ? node : getNth(node.next, index - 1)
+function insertNth(head, index, data) {
+if (index == 0){
+  return push(head, data)
+} else{
+   head.next = insertNth(head.next, index - 1, data)
+  return head
+}
 }
