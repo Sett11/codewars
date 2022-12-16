@@ -1,14 +1,6 @@
-function dbSort(a){
-   let arr = []
-    let arr2 = []
-    for(let i = 0; i < a.length; i++){
-        if(typeof a[i] === 'number'){
-            arr.push(a[i])
-        } else{
-            arr2.push(a[i])
-        }
-    }
-    arr.sort((a,b) => a - b)
-    arr2.sort()
-    return arr.concat(arr2)
+function grader(score) {
+  return score >= 0.6 && score < 0.7 ? "D" :
+  score >= 0.7 && score < 0.8 ? "C" :
+  score >= 0.8 && score < 0.9 ? "B" :
+  score >= 0.9 && score <= 1.0 ? "A" : 'F'
 }
