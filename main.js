@@ -1,13 +1,14 @@
-function step(g, m, n){
-    for(let i = m; i <= n; i++){
-        if(isPrime(i) && isPrime(i+g)){ return [i, i+g]}
+function dbSort(a){
+   let arr = []
+    let arr2 = []
+    for(let i = 0; i < a.length; i++){
+        if(typeof a[i] === 'number'){
+            arr.push(a[i])
+        } else{
+            arr2.push(a[i])
+        }
     }
-    return null;
-}
-function isPrime(n) {
-  let rt = Math.sqrt(n);
-  for(let i = 2; i <= rt; i++) {
-    if(n % i === 0) return false; 
-  }
-  return n !== 1;
+    arr.sort((a,b) => a - b)
+    arr2.sort()
+    return arr.concat(arr2)
 }
