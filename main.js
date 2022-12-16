@@ -1,13 +1,13 @@
-function Node(data) {
-  this.data = data;
-  this.next = null;
+function step(g, m, n){
+    for(let i = m; i <= n; i++){
+        if(isPrime(i) && isPrime(i+g)){ return [i, i+g]}
+    }
+    return null;
 }
-
-function insertNth(head, index, data) {
-if (index == 0){
-  return push(head, data)
-} else{
-   head.next = insertNth(head.next, index - 1, data)
-  return head
-}
+function isPrime(n) {
+  let rt = Math.sqrt(n);
+  for(let i = 2; i <= rt; i++) {
+    if(n % i === 0) return false; 
+  }
+  return n !== 1;
 }
