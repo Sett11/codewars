@@ -1,19 +1,24 @@
 function Node(data) {
-  this.data = data;
-  this.next = null;
+    this.data = data;
+    this.next = null;
 }
 
-function push(head, data) {
-  let newHead = null
-  newHead = new Node(data)
-  newHead.next = head
-  return newHead
+function length(head) {
+ if(head == null)
+   return 0
+  else
+   return 1 + length(head.next)
+ 
 }
 
-function buildOneTwoThree() {
-  let tail = null
-  tail = push(tail, 3)
-  tail = push(tail, 2)
-  tail = push(tail, 1)
-  return tail
+function count(head, data) {
+ if(head == null)
+   return 0
+  let count = 0
+  while(head != null){
+    if(head.data == data)
+      count++
+      head = head.next
+  }
+  return count
 }
