@@ -1,6 +1,7 @@
-function grader(score) {
-  return score >= 0.6 && score < 0.7 ? "D" :
-  score >= 0.7 && score < 0.8 ? "C" :
-  score >= 0.8 && score < 0.9 ? "B" :
-  score >= 0.9 && score <= 1.0 ? "A" : 'F'
+function caffeineBuzz(n){
+  return n % 3 === 0 && n % 4 === 0 && n % 2 === 0 ? "CoffeeScript" :
+  n % 3 === 0 && n % 4 === 0 && n % 2 !== 0? "Coffee" :
+  n % 3 === 0 && n % 2 === 0 ? "JavaScript" :
+  n % 3 === 0 && n % 2 !== 0 ? 'Java' :
+  "mocha_missing!"
 }
