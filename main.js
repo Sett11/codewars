@@ -1,4 +1,8 @@
-function sum() {
-  const arr = [...arguments]
-  return arr.reduce((acc, curr) => acc+curr,0)
+function generateIntegers(n) {
+  const arr = []
+  while(n >= 0){
+    arr.push(n)
+    n--
+  }
+  return arr.reverse()
 }
