@@ -1,6 +1,3 @@
-function nthChar(words){
- return words.map((el, i) => {
-   el = el.charAt(i)
-   return el
- }).join('')
+function borrow(s){
+  return s.replace(/\W/g, '').toLowerCase()
 }
