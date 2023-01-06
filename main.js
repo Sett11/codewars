@@ -1,3 +1,3 @@
-function filterEvenLengthWords(words) {
-  return words.filter(el => el.length % 2 === 0)
+function pluck(objs, name) {
+return objs.map(el=>el[name])
 }
