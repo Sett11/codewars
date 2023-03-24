@@ -1,6 +1,7 @@
-secondLargest=a=>{
-  if(!a||!Array.isArray(a)||a.every((e,i,v)=>e===v[0]))return undefined
-  let x=a.filter(e=>typeof e==='number'||typeof e==='string'&&+e==e).sort((a,b)=>b-a)[1]
-  return typeof x!=='number'?+x:x
+function cleanItUp(s){
+  if(!s)return ''
+  s=s.replace(/[^a-zA-Z]/g,'')
+  const a=[]
+  for(let i=0;i<s.length;i+=5)a.push(s.slice(i,i+5))
+  return a.filter(e=>e.length===5).map(e=>e.charAt(0).toUpperCase()+e.slice(1).toLowerCase()).join` `
 }
-
