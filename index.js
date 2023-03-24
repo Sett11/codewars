@@ -1,9 +1,3 @@
-Array.prototype.myFilter = function(callback) {
-  let newArray = [];
-for(let i = 0; i < this.length; i++){
-  if(callback(this[i])){
-    newArray.push(this[i])
-  }
-}
-  return newArray;
+function spongeMeme(s) {
+ return [...s].map((e,i)=>i%2===0?e.toUpperCase():e.toLowerCase()).join``
 }
